@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace CSharpExtensionMehods
 {
@@ -63,6 +64,45 @@ namespace CSharpExtensionMehods
             }
 
             return objArray.Any(o => o.Equals(obj));
+        }
+
+        public static bool? ToNullabelBool(this object obj)
+        {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            if (bool.TryParse(obj.ToString(), out bool result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static T? ToNullableEnum<T>(this object obj) where T : struct
+        {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            if (obj is T)
+            {
+                return (T)obj;
+            }
+
+            if (Enum.TryParse(obj.ToString(), out T result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
