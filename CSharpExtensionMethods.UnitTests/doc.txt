@@ -1,0 +1,5 @@
+https://nuget-tutorial.net/en/tutorial/100001/create-nuget-package
+nuget spec CSharpExtensionMehods.csproj
+
+nuget pack -Prop Configuration=Release
+nuget push CSharpExtensionMehods.1.1.0.nupkg oy2ckusp4bkmmoqpqo6qbl2iyx6wfmsejmozpyavzb7sgi -Source https://api.nuget.org/v3/index.json
