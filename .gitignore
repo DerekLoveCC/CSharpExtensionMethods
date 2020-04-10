@@ -3,3 +3,9 @@
 ################################################################################
 
 *.nupkg
+/CSharpExtensionMehods/obj
+/CSharpExtensionMehods/bin
+/CSharpExtensionMehods/.vs/CSharpExtensionMehods/v16
+/CSharpExtensionMehods/packages
+/CSharpExtensionMethods.UnitTests/bin
+/CSharpExtensionMethods.UnitTests/obj
