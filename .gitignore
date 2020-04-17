@@ -9,3 +9,6 @@
 /CSharpExtensionMehods/packages
 /CSharpExtensionMethods.UnitTests/bin
 /CSharpExtensionMethods.UnitTests/obj
+/packages
+*.suo
+*.user

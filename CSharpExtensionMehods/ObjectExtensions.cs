@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace CSharpExtensionMehods
+namespace CSharpExtensionMethods
 {
     public static class ObjectExtensions
     {

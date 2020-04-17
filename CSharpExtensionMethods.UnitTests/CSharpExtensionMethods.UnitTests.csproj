@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSharpExtensionMehods\CSharpExtensionMehods.csproj">
+    <ProjectReference Include="..\CSharpExtensionMehods\CSharpExtensionMethods.csproj">
       <Project>{7b6d7df1-53d3-4ee5-a018-6aa41ec37588}</Project>
-      <Name>CSharpExtensionMehods</Name>
+      <Name>CSharpExtensionMethods</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

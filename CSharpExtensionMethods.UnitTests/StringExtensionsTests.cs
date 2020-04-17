@@ -1,4 +1,4 @@
-﻿using CSharpExtensionMehods;
+﻿using CSharpExtensionMethods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CSharpExtensionMethods.UnitTests
