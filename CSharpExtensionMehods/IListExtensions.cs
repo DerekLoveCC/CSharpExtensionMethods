@@ -5,7 +5,7 @@ namespace CSharpExtensionMehods
 {
     public static class IListExtensions
     {
-        public static T FirstOrDeafult<T>(this IList list, Predicate<T> predicate)
+        public static T FirstOrDefault<T>(this IList list, Predicate<T> predicate)
         {
             foreach (var listItem in list)
             {
