@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace CSharpExtensionMehods
+namespace CSharpExtensionMethods
 {
     public static class IListExtensions
     {

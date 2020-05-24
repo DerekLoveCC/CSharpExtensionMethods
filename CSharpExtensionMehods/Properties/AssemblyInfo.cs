@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CSharpExtensionMehods")]
+[assembly: AssemblyTitle("CSharpExtensionMethods")]
 [assembly: AssemblyDescription("Some useful C# extension methods")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Derek Zhao")]
-[assembly: AssemblyProduct("CSharpExtensionMehods")]
+[assembly: AssemblyProduct("CSharpExtensionMethods")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
