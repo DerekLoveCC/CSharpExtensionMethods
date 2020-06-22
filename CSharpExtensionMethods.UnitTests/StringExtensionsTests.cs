@@ -30,5 +30,26 @@ namespace CSharpExtensionMethods.UnitTests
             var result = str.SplitToWords();
             Assert.AreEqual(0, result.Count);
         }
+
+        [TestMethod]
+        public void EqualsIgnoreCase_ReturnTrueWhenBothAreNull()
+        {
+            string str = null;
+            Assert.IsTrue(str.EqualsIgnoreCase(null));
+        }
+
+        [TestMethod]
+        public void EqualsIgnoreCase_ReturnFalseWhenStringIsNull()
+        {
+            string str = null;
+            Assert.IsFalse(str.EqualsIgnoreCase("OtherStr"));
+        }
+
+        [TestMethod]
+        public void EqualsIgnoreCase_ReturnTrueWhenStrEqualsWithDiffCase()
+        {
+            string str = "A String Test";
+            Assert.IsTrue(str.EqualsIgnoreCase("A STRING TEST"));
+        }
     }
 }

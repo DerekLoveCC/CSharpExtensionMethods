@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace CSharpExtensionMethods
@@ -47,6 +48,18 @@ namespace CSharpExtensionMethods
             }
 
             return result;
+        }
+
+        public static bool EqualsIgnoreCase(this string str,
+                                            string otherStr,
+                                            StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (str == otherStr)
+            {
+                return true;
+            }
+
+            return string.Equals(str, otherStr, comparison);
         }
     }
 }
