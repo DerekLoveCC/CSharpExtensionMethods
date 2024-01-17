@@ -5,6 +5,23 @@ namespace CSharpExtensionMethods
 {
     public static class ObjectExtensions
     {
+        public static short? ToNullableShort(this object obj)
+        {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            if (short.TryParse(obj.ToString(), out short result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public static int? ToNullableInt(this object obj)
         {
             if (obj == null)
@@ -39,6 +56,23 @@ namespace CSharpExtensionMethods
             }
         }
 
+        public static float? ToNullableFloat(this object obj)
+        {
+            if (obj == null)
+            {
+                return null;
+            }
+
+            if (float.TryParse(obj.ToString(), out float result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public static double? ToNullableDouble(this object obj)
         {
             if (obj == null)
@@ -54,16 +88,6 @@ namespace CSharpExtensionMethods
             {
                 return null;
             }
-        }
-
-        public static bool In<T>(this T obj, params T[] objArray)
-        {
-            if (objArray == null)
-            {
-                return false;
-            }
-
-            return objArray.Any(o => o.Equals(obj));
         }
 
         public static bool? ToNullabelBool(this object obj)
@@ -90,9 +114,9 @@ namespace CSharpExtensionMethods
                 return null;
             }
 
-            if (obj is T)
+            if (obj is T t)
             {
-                return (T)obj;
+                return t;
             }
 
             if (Enum.TryParse(obj.ToString(), out T result))
@@ -103,6 +127,16 @@ namespace CSharpExtensionMethods
             {
                 return null;
             }
+        }
+
+        public static bool In<T>(this T obj, params T[] objArray)
+        {
+            if (objArray == null)
+            {
+                return false;
+            }
+
+            return objArray.Any(o => o.Equals(obj));
         }
     }
 }

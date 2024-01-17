@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace CSharpExtensionMethods
 {
@@ -15,7 +16,15 @@ namespace CSharpExtensionMethods
                 }
             }
 
-            return default(T);
+            return default;
+        }
+
+        public static void AddRange<T>(this IList list, IEnumerable<T> elementsToAdd)
+        {
+            foreach (var ele in elementsToAdd)
+            {
+                list.Add(ele);
+            }
         }
     }
 }
