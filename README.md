@@ -1,2 +1,2 @@
 # CSharpExtensionMethods
-Useful extension method of C#
+Som useful extension method of C#

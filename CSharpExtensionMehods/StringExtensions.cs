@@ -2,63 +2,64 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace CSharpExtensionMethods;
-
-public static class StringExtensions
+namespace CSharpExtensionMethods
 {
-    public static bool IsNullOrEmpty(this string str)
+    public static class StringExtensions
     {
-        return string.IsNullOrEmpty(str);
-    }
-
-    public static bool IsNullOrWhiteSpace(this string str)
-    {
-        return string.IsNullOrWhiteSpace(str);
-    }
-
-    public static IList<string> SplitToWords(this string str)
-    {
-        var result = new List<string>();
-        if (string.IsNullOrWhiteSpace(str))
+        public static bool IsNullOrEmpty(this string str)
         {
-            return result;
+            return string.IsNullOrEmpty(str);
         }
 
-        var matchCollection = Regex.Matches(str, @"[A-Z\s]+|[^A-Z\s]+");
-        for (int i = 0; i < matchCollection.Count; i += 2)
+        public static bool IsNullOrWhiteSpace(this string str)
         {
-            if (string.IsNullOrWhiteSpace(matchCollection[i].Value))
+            return string.IsNullOrWhiteSpace(str);
+        }
+
+        public static IList<string> SplitToWords(this string str)
+        {
+            var result = new List<string>();
+            if (string.IsNullOrWhiteSpace(str))
             {
-                if (i + 1 < matchCollection.Count)
-                {
-                    result.Add(matchCollection[i + 1].Value);
-                }
+                return result;
             }
-            else
+
+            var matchCollection = Regex.Matches(str, @"[A-Z\s]+|[^A-Z\s]+");
+            for (int i = 0; i < matchCollection.Count; i += 2)
             {
-                if (i + 1 < matchCollection.Count)
+                if (string.IsNullOrWhiteSpace(matchCollection[i].Value))
                 {
-                    result.Add(matchCollection[i].Value + matchCollection[i + 1].Value);
+                    if (i + 1 < matchCollection.Count)
+                    {
+                        result.Add(matchCollection[i + 1].Value);
+                    }
                 }
                 else
                 {
-                    result.Add(matchCollection[i].Value);
+                    if (i + 1 < matchCollection.Count)
+                    {
+                        result.Add(matchCollection[i].Value + matchCollection[i + 1].Value);
+                    }
+                    else
+                    {
+                        result.Add(matchCollection[i].Value);
+                    }
                 }
             }
+
+            return result;
         }
 
-        return result;
-    }
-
-    public static bool EqualsIgnoreCase(this string str,
-                                        string otherStr,
-                                        StringComparison comparison = StringComparison.OrdinalIgnoreCase)
-    {
-        if (str == otherStr)
+        public static bool EqualsIgnoreCase(this string str,
+                                            string otherStr,
+                                            StringComparison comparison = StringComparison.OrdinalIgnoreCase)
         {
-            return true;
-        }
+            if (str == otherStr)
+            {
+                return true;
+            }
 
-        return string.Equals(str, otherStr, comparison);
+            return string.Equals(str, otherStr, comparison);
+        }
     }
 }

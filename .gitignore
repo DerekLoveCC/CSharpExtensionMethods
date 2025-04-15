@@ -14,3 +14,5 @@
 *.user
 /.vs/CSharpExtensionMethods/v16/TestStore/0
 /.vs
+/CSharpExtensionMethods.Tests/bin/**
+/CSharpExtensionMethods.Tests/obj/**

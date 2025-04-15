@@ -1,7 +1,4 @@
-﻿using CSharpExtensionMethods;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace CSharpExtensionMethods.UnitTests
+﻿namespace CSharpExtensionMethods.Tests
 {
     [TestClass]
     public class StringExtensionsTests
