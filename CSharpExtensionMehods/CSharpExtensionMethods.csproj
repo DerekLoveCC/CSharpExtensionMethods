@@ -10,9 +10,20 @@
 		<PackageMetadata>
 			<ProjectUrl>https://github.com/DerekLoveCC/CSharpExtensionMethods</ProjectUrl>
 		</PackageMetadata>
-		<Copyright>Copyright ©  2024</Copyright>
-		<AssemblyVersion>2.0.0.1</AssemblyVersion>
-		<FileVersion>2.0.0.1</FileVersion>
-		<Version>2.0.1</Version>
+		<Copyright>Copyright ©  2025</Copyright>
+		<AssemblyVersion>3.0.0.1</AssemblyVersion>
+		<FileVersion>3.0.0.1</FileVersion>
+		<Version>3.0.1</Version>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/DerekLoveCC/CSharpExtensionMethods</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/DerekLoveCC/CSharpExtensionMethods</RepositoryUrl>
+		<PackageTags>C# Extension Methods</PackageTags>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 </Project>
