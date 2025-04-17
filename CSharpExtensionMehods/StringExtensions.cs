@@ -61,5 +61,39 @@ namespace CSharpExtensionMethods
 
             return string.Equals(str, otherStr, comparison);
         }
+
+        public static bool ContainsIgnoreCase(this string str,
+                                              string value,
+                                              StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (value == null)
+            {
+                return false;
+            }
+            return str?.IndexOf(value, comparison) >= 0;
+        }
+
+        public static bool StartsWithIgnoreCase(this string str,
+                                                string value,
+                                                StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (value == null)
+            {
+                return false;
+            }
+            return str?.StartsWith(value, comparison) == true;
+        }
+
+        public static bool EndsWithIgnoreCase(this string str,
+                                              string value,
+                                              StringComparison comparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (value == null)
+            {
+                return false;
+            }
+
+            return str?.EndsWith(value, comparison) == true;
+        }
     }
 }
