@@ -52,28 +52,28 @@ namespace CSharpExtensionMethods.Tests
             Assert.IsTrue(str.EqualsIgnoreCase("A STRING TEST"));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ContainsIgnoreCaseTest_ReturnTrueWhenContain()
         {
             string str = "A String Test";
             Assert.IsTrue(str.ContainsIgnoreCase("STRING"));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ContainsIgnoreCaseTest_ReturnFalseWhenNotContain()
         {
             string str = "A String Test";
             Assert.IsFalse(str.ContainsIgnoreCase("STRING1"));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ContainsIgnoreCaseTest_ReturnFalseWhenStrIsNull()
         {
             string str = null;
             Assert.IsFalse(str.ContainsIgnoreCase("STRING1"));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ContainsIgnoreCaseTest_ReturnFalseWhenArgIsNull()
         {
             const string str = "A String Test";
